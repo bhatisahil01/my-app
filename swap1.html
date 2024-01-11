@@ -1,0 +1,14 @@
+// Swap two numbers without using a third variable
+<script>
+let num1 = parseFloat(prompt("Enter the first number:"));
+let num2 = parseFloat(prompt("Enter the second number:"));
+
+console.log("Before swapping: num1 =", num1, ", num2 =", num2);
+
+// Without using a third variable
+num1 = num1 + num2;
+num2 = num1 - num2;
+num1 = num1 - num2;
+
+console.log("After swapping without third variable: num1 =", num1, ", num2 =", num2);
+</script>

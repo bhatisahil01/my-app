@@ -1,0 +1,16 @@
+<script>
+
+
+const exchangeRate = 75.5;
+
+let dollarAmount = parseFloat(prompt("Enter the dollar amount:"));
+
+
+if (isNaN(dollarAmount)) {
+  console.log("Please enter a valid number for the dollar amount.");
+} else {
+  let rupeeAmount = dollarAmount * exchangeRate;
+  console.log(`${dollarAmount} dollars is equal to ${rupeeAmount.toFixed(2)} rupees.`);
+}
+
+</script>

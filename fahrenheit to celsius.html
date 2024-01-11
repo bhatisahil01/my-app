@@ -1,0 +1,14 @@
+
+<script>
+let fahrenheit = parseFloat(prompt("Enter the temperature in Fahrenheit:"));
+
+
+if (isNaN(fahrenheit)) {
+  console.log("Please enter a valid number for the temperature in Fahrenheit.");
+} else {
+  
+  let celsius = (fahrenheit - 32) * (5/9);
+
+  console.log(`${fahrenheit} degrees Fahrenheit is equal to ${celsius.toFixed(2)} degrees Celsius.`);
+}
+</script>

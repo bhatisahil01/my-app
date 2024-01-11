@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Simple Calculator</title>
+  <style>
+    input, button {
+      margin: 5px;
+    }
+  </style>
+</head>
+<body>
+
+  <input type="text" id="num1" placeholder="Enter number 1">
+  <input type="text" id="num2" placeholder="Enter number 2">
+
+  <br>
+
+  <button onclick="calculate('add')">Addition (+)</button>
+  <button onclick="calculate('sub')">Subtraction (-)</button>
+  <button onclick="calculate('multi')">Multiplication (*)</button>
+  <button onclick="calculate('div')">Division (/)</button>
+
+  <br>
+
+  <p id="result">Result: </p>
+
+  <script>
+    function calculate(operation) {
+      var num1 = parseFloat(document.getElementById('num1').value);
+      var num2 = parseFloat(document.getElementById('num2').value);
+      var result;
+
+      switch (operation) {
+        case 'add':
+          result = num1 + num2;
+          break;
+        case 'sub':
+          result = num1 - num2;
+          break;
+        case 'multi':
+          result = num1 * num2;
+          break;
+        case 'div':
+          if (num2 !== 0) {
+            result = num1 / num2;
+          } else {
+            result = 'Cannot divide by zero';
+          }
+          break;
+        default:
+          result = 'Invalid operation';
+      }
+
+      document.getElementById('result').innerText = 'Result: ' + result;
+    }
+  </script>
+
+</body>
+</html>

@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login and Signup Page</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: rgb(158, 158, 252);
+            margin: 0;
+            display: flex;
+            align-items:center;
+            justify-content:center;
+            height: 100vh;
+        }
+
+        .form-container {
+            background-color: #df8888;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            width: 300px;
+        }
+
+        .form-container h2 {
+            text-align: center;
+            color: black;
+        }
+
+        .form-group {
+            margin-bottom: 20px;
+        }
+
+        .form-group label {
+            display: block;
+            margin-bottom: 8px;
+            color:black;
+        }
+
+        .form-group input,
+        .form-group checkbox {
+            width: calc(100% - 20px);
+           
+            padding: 12px;
+            box-sizing: border-box;
+            border: 1px solid #772222;
+            border-radius: 40px;
+        }
+
+        .form-group input[type="submit"] {
+            background-color:rgb(47, 120, 255);
+            color: rgb(255, 255, 255);
+            cursor: pointer;
+        }
+
+        .form-group p {
+            text-align: center;
+            margin-top: 10px;
+        }
+
+        .form-group .checkbox-group {
+            display: contents;
+            align-items: normal;
+        }
+
+        .form-group .checkbox-group input {
+            margin-right: 80px;
+        }
+
+        #login-form {
+            display: inline-block;
+            margin-right: 20px;
+        }
+
+  
+        .Register-link {
+            color: blue;
+            text-decoration: none;
+            cursor: pointer;
+        }
+        .form-group .forgot-password-link {
+            text-align: right;
+            color:blue;
+            text-decoration: none;
+            cursor: pointer;
+            display: block;
+        }
+
+        #signup-form {
+            display: inline-block;
+            margin-right: 20px;
+        }
+
+        .login-link {
+            color: blue;
+            text-decoration: none;
+            cursor: pointer;
+        }
+
+
+        
+    </style>
+</head>
+
+<body>
+
+
+
+    <div class="form-container" id="signup-form">
+        <h2>Sign Up</h2>
+        <form>
+            <div class="form-group">
+
+                <input type="text" placeholder="Name" required>
+            </div>
+            <div class="form-group">
+
+                <input type="text" placeholder="Username">
+            </div>
+            <div class="form-group">
+
+                <input type="password" placeholder="Password?" required>
+            </div>
+            <div class="form-group">
+
+                <input type="password" placeholder="Re-EnterPassword" required>
+            </div>
+            <div class="form-group">
+                <div class="checkbox-group">
+                    <input type="checkbox" >
+                    <center><label for="agreeTerms">I agree to the terms & conditions</label>
+                    </center>
+                </div>
+            </div>
+            <div class="form-group">
+                <input type="submit" value="Sign Up">
+            </div>
+        </form>
+        <center>
+            <p>Already a member?<a class="login-link" href="#login-form">Login here</a></p>
+        </center>
+    </div>
+
+    <div class="form-container" id="login-form">
+        <h2>Login</h2>
+        <form>
+            <div class="form-group">
+                <input type="text" placeholder="Username" required>
+            </div>
+            <div class="form-group">
+
+                <input type="password" placeholder="loginPassword" required><br>
+                <br><a class="forgot-password-link" href="#forgot-password">Forgot Password?</a>
+
+
+            </div>
+
+            <div class="form-group">
+                <input type="submit" value="Login">
+
+
+            </div>
+        </form>
+        <center>
+            <p>Not a member?<a class="Register-link" href="#Register-form">Register Now</a></p>
+        </center>
+    </div>
+
+</body>
+
+</html>

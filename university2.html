@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>University Page</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            /* background-color:pink;
+            background-image: url('123.PNG');
+            background-size: cover;
+            background-position: center;
+            color: #fff; */
+        }
+
+        header {
+            background-color: #949090;
+            text-align: center;
+            padding: 1em 0;
+        }
+
+        header img {
+            max-width: 100%;
+            height: auto;
+        }
+
+        nav {
+            width: 100%;
+            background-color:rgb(194, 191, 191);
+            padding: 20px;
+        }
+
+        nav a {
+            color:black;
+            text-decoration: none;
+            padding: 0 1em;
+        }
+        nav ul{
+            display: flex;
+            justify-content: center; 
+            text-decoration: none; 
+            list-style: none;
+        }
+        nav ul li a:hover{
+            text-decoration: underline;
+           color: blue;
+        
+        }
+        .container{
+            padding: 50px;
+            width: 100%;
+            color: black;
+            background-image: url('xyz.jpg');
+            background-repeat: no-repeat;
+            background-size: cover;
+        }
+        section {
+            padding: 2em;
+        }
+        .home h1{
+            color: brown;
+            text-decoration: underline;
+            font-size: 40px;
+        }
+
+        footer {
+            background-color: rgba(0, 51, 51, 0.8);
+            text-align: center;
+            padding: 1em 0;
+            position: fixed;
+            bottom: 0;
+            width: 100%;
+        }
+        .programs h1{
+           color: rgb(129, 139, 139);
+           text-decoration: underline;
+        }
+        .admissions h1{
+            color: chartreuse;
+            text-decoration: underline;
+        }
+        .about h1{
+            color: darkblue;
+            text-decoration: underline;
+        }
+    
+    </style>
+</head>
+<body>
+    <header>
+        <img src="data:image/png;base64,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" width="10%"height="10%",alt="University Logo">
+               <h1> Noida Institute of Engineering and Technology (NIET)</h1>
+    
+        <p>Where Dreams Take Flight</p>
+    </header>
+    <nav>
+        <ul>
+            <li><a class="Details" href="#Home">Home</a></li>
+            <li><a class="Details" href="#Program">Programs</a></li>
+            <li><a  class="Details" href="#Admission">Admissions</a></li>
+            <li><a  class="Details" href="#About">About Us</a></li>
+            <li><a  class="Details" href="#Contact">Contact</a></li>
+          </ul>
+    </nav>
+    <div class="container">
+       <div id="Home"class="home">
+
+    
+    <h1>Welcome to Our University</h1>
+    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed ac ultrices justo, ac cursus eros.</p>
+    <p>Explore our programs and take the first step towards a bright future.</p>
+    <a href="#" class="cta-button">Apply Now</a>
+       </div>
+
+  <div id="Program"class="programs">
+    <h1>Our Programs</h1>
+    <p>Discover the wide range of academic programs we offer to help you achieve your educational goals.</p>
+    <a href="#" class="cta-button">Programs</a>
+  </div>
+
+  <div id="Admission"class="admissions">
+    <h1>Admissions</h1>
+ <p>Information about the admission process, requirements, and how to apply to our university.</p>
+  </div>
+
+  <div id="About" class="about">
+    <h1>About Us</h1>
+    <p>Learn more about our university, our mission, values, and commitment to academic excellence.</p>
+  </div>
+
+  <div id="Contact" class="contact">
+    <h1>Contact Us</h1>
+    <p>Reach out to us if you have any questions or need further assistance. We're here to help!</p>
+  </div>
+
+
+    <section>
+        <h2> Welcome To (NIET)</h2>
+        <p>NIET is one of the best engineering colleges in Greater Noida. It is known as top private B.Tech engineering college in Delhi NCR UP and best placement...</p>
+        <p>As the first private educational institution in Uttar Pradesh to be granted "autonomous" status by the UGC, we design our own curriculum based on the needs and trends in the industry – enabling students for better employment opportunities around the world....</p>
+
+    </section>
+</div>
+
+    <footer>
+        <p>&copy; 2023 University Name. All rights reserved.</p>
+    </footer>
+</body>
+</html>
